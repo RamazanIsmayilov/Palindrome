@@ -17,6 +17,7 @@ const checkPalindrome = (e) => {
         }
     }
     input.value = ""
+    
 }
 
 form.onsubmit = checkPalindrome;
