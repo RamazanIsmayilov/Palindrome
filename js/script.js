@@ -5,18 +5,18 @@ const output = document.querySelector('.output');
 
 const checkPalindrome = (e) => {
     e.preventDefault();
-    const text = input.value;
+    const text = input.value.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
     const reverseText = text.split('').reverse().join('');
     if (!text) {
         alert('Please input a value');
     }else {
         if(text === reverseText) {
-            output.innerHTML = text + " a palindrome.";
+            output.innerHTML = "Yes, <strong><em>" + input.value + "</em></strong> is a palindrome.";
         }else{
-            output.innerHTML = text + " is not a palindrome.";
+            output.innerHTML = "No, <strong><em>" + input.value + "</em></strong> is not a palindrome.";
         }
     }
-    input.value = ""
+    input.value = "";
     
 }
 
